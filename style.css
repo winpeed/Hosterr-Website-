@@ -8,8 +8,8 @@ body {
   box-sizing: border-box;
   font-size: 14px;
   background: #f9f4e8;
-  overflow-x: hidden;
   padding: 1.5em;
+  max-width: 89%;
 }
 
 h1,
