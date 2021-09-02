@@ -8,8 +8,9 @@ body {
   box-sizing: border-box;
   font-size: 14px;
   background: #f9f4e8;
-  padding: 1.5em;
-  max-width: 89%;
+  padding: 1.5em 1em;
+  max-width: 550px;
+  margin: 0 auto;
 }
 
 h1,
@@ -25,6 +26,16 @@ span {
   font-family: "Lato", sans-serif;
 }
 
+nav ul li {
+  list-style: none;
+  padding: 0em 1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #636261;
+}
 .hiring-btn {
   padding: 0.7em 1em;
   margin-left: 1em;
@@ -61,16 +72,18 @@ main {
 }
 
 main div:nth-child(2) {
-  margin-left: 2em;
+  margin-left: 3em;
   max-width: 87%;
+  display: flex;
+  justify-content: center;
 }
 
 main div:nth-child(1) {
-  margin-top: 110%;
+  margin-top: 100%;
 }
 
 img {
-  max-width: 100%;
+  max-width: 95%;
 }
 
 .image-container {
@@ -117,14 +130,19 @@ button {
   border: none;
   border-radius: 3px;
   margin: 0.6em 0em;
+  outline: none;
 }
 
-button {
+.btn-join {
   background: #4977ea;
   color: white;
   font-weight: 400;
   letter-spacing: 0.03em;
   cursor: pointer;
+  padding: 1em;
+  border: none;
+  border-radius: 3px;
+  margin: 0.6em 1em;
 }
 
 .icon-text {
@@ -160,4 +178,115 @@ footer div:nth-child(2) h4 {
 }
 footer div:nth-child(2) span {
   margin-left: 1.3em;
+}
+
+@media (min-width: 550px) {
+  body {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  main div:nth-child(1) {
+    margin-top: 50%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  input {
+    width: 40%;
+  }
+
+  button {
+    width: 25%;
+    margin-left: 1em;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer div:nth-child(2) {
+    padding: 0em;
+  }
+
+  img {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 950px) {
+  .hamburger {
+    display: none;
+  }
+
+  body {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main div:nth-child(2) {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  main div:nth-child(1) {
+    margin-top: 0%;
+    width: 60%;
+  }
+
+  main {
+    min-height: 73vh;
+    padding: 2em 0em 0em 0em;
+  }
+
+  img {
+    max-width: 85%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.8rem;
+    padding-right: 1.5em;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    padding-right: 11em;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav ul:nth-child(1) {
+    margin-right: 6em;
+  }
+
+  nav ul:nth-child(2) li:nth-child(2) a {
+    color: white;
+  }
 }
