@@ -11,6 +11,7 @@ body {
   padding: 1.5em 1em;
   max-width: 550px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 h1,
@@ -46,8 +47,70 @@ nav ul li a {
   background-image: linear-gradient(to right, #ea965c, #ea656d);
 }
 
-nav {
-  display: none;
+.btn-join {
+  background: #4977ea;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  padding: 1em;
+  border: none;
+  border-radius: 3px;
+  margin: 0.6em 0em;
+}
+
+@media (min-width: 0px) and (max-width: 950px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: #f9f4e8;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in 0.3s;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0em;
+  }
+
+  nav ul li {
+    padding: 1.2em 0em;
+  }
+
+  nav ul li a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .btn-join {
+    background: #ea7368;
+  }
+
+  .btn-join a {
+    color: white;
+  }
+}
+
+.nav-open {
+  transform: translateX(0%);
+}
+
+.close-nav {
+  content: url("img/close.svg");
+  width: 20px;
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in 0.3s;
 }
 
 header {
@@ -63,6 +126,7 @@ header {
 
 .hamburger {
   cursor: pointer;
+  z-index: 1000;
 }
 
 main {
@@ -131,18 +195,6 @@ button {
   border-radius: 3px;
   margin: 0.6em 0em;
   outline: none;
-}
-
-.btn-join {
-  background: #4977ea;
-  color: white;
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  cursor: pointer;
-  padding: 1em;
-  border: none;
-  border-radius: 3px;
-  margin: 0.6em 0em;
 }
 
 .icon-text {
